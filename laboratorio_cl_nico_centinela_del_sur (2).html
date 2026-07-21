@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Clínico Centinela del Sur | Tu salud en manos de expertos</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Laboratorio Clínico y Centro Médico Centinela del Sur en Santo Domingo. Exámenes de laboratorio, ecografías, medicina general y especialidades con tecnología de vanguardia.">
+    <meta name="keywords" content="Laboratorio Clinico, Centinela del Sur, Santo Domingo, Examenes de Sangre, Ecografias, Centro Medico, Toma de muestras a domicilio, Saludsa">
+    <meta name="author" content="Laboratorio Clínico Centinela del Sur">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Laboratorio Clínico Centinela del Sur | Tu salud en manos de expertos">
+    <meta property="og:description" content="Análisis clínicos automatizados, especialidades médicas y toma de muestras a domicilio en Santo Domingo.">
+    <meta property="og:image" content="https://i.postimg.cc/y8b6C427/Whats-App-Image-2026-07-21-at-11-42-03-AM.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animations CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5eef8',
+                            100: '#e6d3ef',
+                            200: '#cca8de',
+                            500: '#5B1E77', // Primary Purple
+                            600: '#4a1762',
+                            700: '#3a104e',
+                            800: '#2a0b39',
+                            900: '#1b0525',
+                        },
+                        accent: {
+                            50: '#e6fafa',
+                            100: '#c2f3f3',
+                            400: '#2bd2d2',
+                            500: '#16C4C4', // Secondary Teal
+                            600: '#109e9e',
+                            700: '#0b7777',
+                        },
+                        darkSlate: '#1E293B',
+                        lightBg: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(91, 30, 119, 0.08)',
+                        'glass-hover': '0 16px 48px 0 rgba(22, 196, 196, 0.22)',
+                        'glow': '0 0 25px rgba(22, 196, 196, 0.4)',
+                        'glow-purple': '0 0 25px rgba(91, 30, 119, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5B1E77;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #16C4C4;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .glass-dark {
+            background: rgba(27, 5, 37, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(22, 196, 196, 0.5);
+            box-shadow: 0 16px 40px rgba(91, 30, 119, 0.12);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(27, 5, 37, 0.92) 0%, rgba(91, 30, 119, 0.88) 50%, rgba(22, 196, 196, 0.8) 100%), 
+                        url('https://i.postimg.cc/y8b6C427/Whats-App-Image-2026-07-21-at-11-42-03-AM.jpg') center/cover no-repeat fixed;
+        }
+
+        .page-view {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .page-view.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-lightBg text-darkSlate font-sans antialiased selection:bg-accent-500 selection:text-white flex flex-col min-h-screen relative">
+
+    <div id="preloader" class="fixed inset-0 z-50 bg-brand-900 flex flex-col items-center justify-center transition-opacity duration-500 pointer-events-none">
+        <div class="relative flex items-center justify-center mb-6">
+            <div class="w-24 h-24 rounded-full border-4 border-accent-500/30 border-t-accent-500 animate-spin"></div>
+            <div class="absolute w-14 h-14 bg-brand-500 rounded-2xl flex items-center justify-center text-white text-2xl shadow-glow">
+                <i class="fa-solid fa-microscope animate-bounce"></i>
+            </div>
+        </div>
+        <h2 class="text-white font-bold text-xl tracking-wider">CENTINELA DEL SUR</h2>
+        <p class="text-accent-400 text-xs mt-1">Cargando experiencia médica...</p>
+    </div>
+
+    <div class="bg-brand-900 text-slate-200 text-xs py-2 px-4 border-b border-brand-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <span class="flex items-center gap-1.5 text-accent-400 font-medium">
+                    <i class="fa-solid fa-clock"></i> Lun - Vie: 7:30 am - 5:00 pm | Sáb: 8:00 am - 1:00 pm
+                </span>
+                <span class="hidden md:flex items-center gap-1.5 text-slate-300">
+                    <i class="fa-solid fa-location-dot text-accent-500"></i> Matriz: Av. Chone y Río Chila, Santo Domingo
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:0992930301" class="hover:text-accent-400 transition-colors flex items-center gap-1 font-semibold">
+                    <i class="fa-solid fa-phone text-accent-500"></i> 099 293 0301
+                </a>
+                <span class="text-slate-600">|</span>
+                <span class="bg-accent-500/20 text-accent-400 text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-accent-500/30 flex items-center gap-1">
+                    <i class="fa-solid fa-shield-halved"></i> Convenio Saludsa & Tarjetas
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <header id="main-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#inicio" onclick="switchPage('inicio')" class="flex items-center py-1 group">
+                    <img src="https://i.postimg.cc/9Q9sx6dS/Whats-App-Image-2026-03-05-at-12-24-53-PM-jpe.jpg" 
+                         alt="Laboratorio Clínico Centinela del Sur Logo" 
+                         class="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                         onerror="this.onerror=null; this.src='https://placehold.co/220x60/5B1E77/ffffff?text=Centinela+del+Sur';">
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center gap-1 font-medium text-xs xl:text-sm">
+                    <button onclick="switchPage('inicio')" id="nav-inicio" class="nav-btn px-3 py-2 rounded-xl transition-all text-brand-500 bg-brand-50 font-semibold">Inicio</button>
+                    <button onclick="switchPage('nosotros')" id="nav-nosotros" class="nav-btn px-3 py-2 rounded-xl transition-all text-slate-600 hover:text-brand-500 hover:bg-slate-50">Nosotros</button>
+                    <button onclick="switchPage('servicios')" id="nav-servicios" class="nav-btn px-3 py-2 rounded-xl transition-all text-slate-600 hover:text-brand-500 hover:bg-slate-50">Servicios</button>
+                    <button onclick="switchPage('promociones')" id="nav-promociones" class="nav-btn px-3 py-2 rounded-xl transition-all text-slate-600 hover:text-brand-500 hover:bg-slate-50 flex items-center gap-1.5">
+                        Promociones <span class="w-2 h-2 rounded-full bg-accent-500 animate-ping"></span>
+                    </button>
+                    <button onclick="switchPage('catalogo')" id="nav-catalogo" class="nav-btn px-3 py-2 rounded-xl transition-all text-slate-600 hover:text-brand-500 hover:bg-slate-50">Exámenes</button>
+                    <button onclick="switchPage('contacto')" id="nav-contacto" class="nav-btn px-3 py-2 rounded-xl transition-all text-slate-600 hover:text-brand-500 hover:bg-slate-50">Contacto & Sucursales</button>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openBookingModal()" class="bg-gradient-to-r from-brand-500 to-accent-500 hover:from-brand-600 hover:to-accent-600 text-white font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl shadow-md shadow-brand-500/20 hover:shadow-lg transition-all flex items-center gap-2 transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span class="hidden sm:inline">Agenda tu Cita</span>
+                        <span class="sm:hidden">Agendar</span>
+                    </button>
+
+                    <!-- Mobile Menu Toggle Button -->
+                    <button id="mobile-toggle" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars text-lg" id="mobile-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md px-4 py-4 space-y-2 shadow-xl">
+            <button onclick="switchPage('inicio'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-semibold text-brand-500 bg-brand-50 flex items-center justify-between">
+                <span>Inicio</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+            <button onclick="switchPage('nosotros'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+                <span>Nosotros</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+            <button onclick="switchPage('servicios'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+                <span>Servicios</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+            <button onclick="switchPage('promociones'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+                <span>Promociones & Paquetes</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+            <button onclick="switchPage('catalogo'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+                <span>Catálogo de Exámenes</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+            <button onclick="switchPage('contacto'); toggleMobileMenu()" class="w-full text-left px-4 py-3 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 flex items-center justify-between">
+                <span>Contacto & Sucursales</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+            <div class="pt-2">
+                <a href="https://wa.me/593992930301?text=Hola,%20deseo%20agendar%20una%20cita%20o%20solicitar%20información" target="_blank" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Directo (099 293 0301)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow">
+
+        <div id="view-inicio" class="page-view active">
+            
+            <!-- Hero Section -->
+            <section class="hero-bg text-white relative min-h-[90vh] flex items-center py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-accent-400 shadow-lg">
+                            <i class="fa-solid fa-circle-check text-accent-500"></i> Calidad Internacional en Santo Domingo
+                        </div>
+                        
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                            Tu salud en manos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 via-sky-300 to-white">expertos</span>
+                        </h1>
+                        
+                        <p class="text-slate-200 text-base sm:text-lg max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+                            Diagnósticos clínicos precisos, atención médica especializada y procesamiento automatizado de muestras. Cuidamos de ti y de tu familia con calidez y tecnología de última generación.
+                        </p>
+
+                        <!-- Hero CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="https://wa.me/593992930301?text=Hola%20Laboratorio%20Centinela%20del%20Sur,%20deseo%20agendar%20una%20cita" target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/30 hover:shadow-emerald-500/50 transition-all flex items-center justify-center gap-3 group transform hover:-translate-y-1">
+                                <i class="fa-brands fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i>
+                                <span>Agendar por WhatsApp</span>
+                            </a>
+                            <button onclick="switchPage('servicios')" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-semibold text-sm px-8 py-4 rounded-2xl transition-all flex items-center justify-center gap-2 hover:border-white">
+                                <span>Ver Servicios</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Floating Micro Cards -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 border-t border-white/10 text-left">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-accent-500/20 border border-accent-500/30 flex items-center justify-center text-accent-400 shrink-0">
+                                    <i class="fa-solid fa-truck-medical text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Muestras a Domicilio</h4>
+                                    <p class="text-[10px] text-slate-300">En todo Santo Domingo</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/30 border border-brand-500/40 flex items-center justify-center text-brand-200 shrink-0">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Resultados Rápidos</h4>
+                                    <p class="text-[10px] text-slate-300">Directo en PDF por WhatsApp</p>
+                                </div>
+                            </div>
+
+                            <div class="col-span-2 sm:col-span-1 flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                                    <i class="fa-solid fa-house-medical text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">6 Sucursales</h4>
+                                    <p class="text-[10px] text-slate-300">Cerca de ti</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Hero Widget Card -->
+                    <div class="lg:col-span-5" data-aos="fade-left">
+                        <div class="glass-panel rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-800 relative overflow-hidden border border-white/60">
+                            <div class="absolute -top-10 -right-10 w-32 h-32 bg-accent-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                            
+                            <div class="flex items-center justify-between mb-6">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-brand-500 bg-brand-50 px-2.5 py-1 rounded-md">Atención Directa</span>
+                                    <h3 class="font-bold text-xl text-brand-900 mt-1">Cotiza tu Examen</h3>
+                                </div>
+                                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-500 to-accent-500 text-white flex items-center justify-center shadow-md">
+                                    <i class="fa-solid fa-calculator text-lg"></i>
+                                </div>
+                            </div>
+
+                            <form onsubmit="handleHeroQuickQuote(event)" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Tipo de Servicio</label>
+                                    <select id="hero-quote-type" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs font-medium focus:ring-2 focus:ring-accent-500 focus:outline-none bg-slate-50/80">
+                                        <option value="Laboratorio Clínico">Laboratorio Clínico (Sangre, Orina, Heces)</option>
+                                        <option value="Toma de Muestras a Domicilio">Toma de Muestras a Domicilio</option>
+                                        <option value="Ecografías Diagnósticas">Ecografía Diagnóstica HD</option>
+                                        <option value="Chequeo Preventivo Completo">Chequeo Preventivo Completo</option>
+                                        <option value="Consulta Médica Especializada">Consulta Médica Especializada</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Sucursal más cercana</label>
+                                    <select id="hero-quote-branch" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs font-medium focus:ring-2 focus:ring-accent-500 focus:outline-none bg-slate-50/80">
+                                        <option value="Matriz (Av. Chone)">Matriz: Av. Chone y Río Chila</option>
+                                        <option value="Sucursal 1 (El Búa)">Sucursal 1: Vía El Búa (Frente a Hospital)</option>
+                                        <option value="Sucursal 2 (Latacunga)">Sucursal 2: Latacunga y Av. Quito</option>
+                                        <option value="Sucursal 3 (Rumiñahui)">Sucursal 3: Barrio Rumiñahui</option>
+                                        <option value="Sucursal 4 (Los Rosales)">Sucursal 4: Rosales 4ta etapa</option>
+                                        <option value="Sucursal 5 (La Quadra)">Sucursal 5: Madrid y Av. Quito</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nombre completo y Teléfono</label>
+                                    <input type="text" id="hero-quote-name" required placeholder="Ej: María López - 0987654321" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-accent-500 focus:outline-none bg-slate-50/80">
+                                </div>
+
+                                <button type="submit" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl shadow-lg shadow-brand-500/30 transition-all text-xs flex items-center justify-center gap-2 hover:shadow-brand-500/50">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Solicitar Información y Precios</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Counter Stats Bar -->
+            <section class="py-12 bg-white border-b border-slate-100 relative z-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-accent-500/40 transition-colors" data-aos="zoom-in">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-500 font-sans tracking-tight">100%</div>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Resultados Confiables</p>
+                            <span class="text-[10px] text-slate-400 block">Formato Digital PDF</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-accent-500/40 transition-colors" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-accent-500 font-sans tracking-tight">6</div>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Sucursales</p>
+                            <span class="text-[10px] text-slate-400 block">En Santo Domingo</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-accent-500/40 transition-colors" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-brand-500 font-sans tracking-tight">HD</div>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Ecografía 4D/HD</p>
+                            <span class="text-[10px] text-slate-400 block">Alta resolución</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-accent-500/40 transition-colors" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-emerald-500 font-sans tracking-tight">24/7</div>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Toma a Domicilio</p>
+                            <span class="text-[10px] text-slate-400 block">Agendamiento previo</span>
+                        </div>
+                        <div class="col-span-2 md:col-span-1 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-accent-500/40 transition-colors" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="text-3xl sm:text-4xl font-extrabold text-accent-500 font-sans tracking-tight">
+                                <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            </div>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Envío a WhatsApp</p>
+                            <span class="text-[10px] text-slate-400 block">Rápido y Seguro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Services Cards -->
+            <section class="py-20 bg-lightBg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                        <span class="text-xs font-bold uppercase tracking-widest text-accent-600 bg-accent-50 px-3 py-1 rounded-full border border-accent-100">Nuestras Especialidades</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-900 mt-3">Servicios Integrales de Salud</h2>
+                        <p class="text-slate-600 text-sm mt-3">Contamos con laboratorios automatizados y tecnología diagnóstica avanzada para brindarte resultados con total rigurosidad médica.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Service 1 -->
+                        <div class="glass-card rounded-3xl p-8 relative flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+                            <div>
+                                <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-500 flex items-center justify-center text-2xl group-hover:bg-brand-500 group-hover:text-white transition-all shadow-sm">
+                                    <i class="fa-solid fa-vial"></i>
+                                </div>
+                                <h3 class="font-bold text-xl text-slate-900 mt-6">Laboratorio Clínico</h3>
+                                <p class="text-slate-600 text-xs mt-3 leading-relaxed">
+                                    Análisis de laboratorio automatizados: hematología, química sanguínea, tiroides, hormonas, inmunología, marcadores tumorales y microbiología.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs font-semibold text-brand-500">Entrega en el día</span>
+                                <button onclick="switchPage('catalogo')" class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 hover:bg-accent-500 hover:text-white transition-all flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="glass-card rounded-3xl p-8 relative flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+                            <div>
+                                <div class="w-14 h-14 rounded-2xl bg-accent-50 text-accent-600 flex items-center justify-center text-2xl group-hover:bg-accent-500 group-hover:text-white transition-all shadow-sm">
+                                    <i class="fa-solid fa-truck-medical"></i>
+                                </div>
+                                <h3 class="font-bold text-xl text-slate-900 mt-6">Toma a Domicilio</h3>
+                                <p class="text-slate-600 text-xs mt-3 leading-relaxed">
+                                    ¿No puedes salir de casa? Nuestro equipo de flebotomistas certificados acude a tu hogar u oficina con altos estándares de bioseguridad.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs font-semibold text-accent-600">Servicio Personalizado</span>
+                                <button onclick="openBookingModal('Toma de Muestras a Domicilio')" class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 hover:bg-accent-500 hover:text-white transition-all flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="glass-card rounded-3xl p-8 relative flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
+                            <div>
+                                <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                                    <i class="fa-solid fa-wave-square"></i>
+                                </div>
+                                <h3 class="font-bold text-xl text-slate-900 mt-6">Ecografía Diagnóstica HD</h3>
+                                <p class="text-slate-600 text-xs mt-3 leading-relaxed">
+                                    Estudios de ultrasonido de alta resolución: abdominal, obstétrica, tiroidea, pélvica, renal, mamaria, próstata y partes blandas.
+                                </p>
+                            </div>
+                            <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                                <span class="text-xs font-semibold text-indigo-600">Imagenología Digital</span>
+                                <button onclick="openBookingModal('Ecografía Diagnóstica HD')" class="w-9 h-9 rounded-xl bg-slate-100 text-slate-700 hover:bg-accent-500 hover:text-white transition-all flex items-center justify-center">
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial & Assurance Banner -->
+            <section class="py-16 bg-gradient-to-r from-brand-900 via-brand-800 to-slate-900 text-white relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
+                            <span class="text-accent-400 text-xs font-bold uppercase tracking-wider">¿Por qué elegir Centinela del Sur?</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold">Resultados Confiables con Protocolos Internacionales</h3>
+                            <p class="text-slate-300 text-xs sm:text-sm font-light max-w-2xl">
+                                Contamos con un equipo de laboratoristas y personal médico multidisciplinario dedicado a garantizar la exactitud de tus pruebas clínicas. Tus exámenes se entregan de forma confidencial directo en tu teléfono.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                            <button onclick="switchPage('contacto')" class="bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs sm:text-sm px-8 py-4 rounded-2xl shadow-glow transition-all transform hover:-translate-y-1">
+                                Ver Nuestras 6 Sucursales
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <div id="view-nosotros" class="page-view">
+            <section class="py-16 bg-white border-b border-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                        <div class="lg:col-span-6 space-y-4">
+                            <span class="bg-brand-50 text-brand-500 text-xs font-bold px-3 py-1 rounded-full uppercase">Quiénes Somos</span>
+                            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900">Laboratorio Clínico & Centro Médico</h1>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                                Somos una institución médica con amplia trayectoria en Santo Domingo de los Tsáchilas, guiada por valores de ética, profesionalismo e innovación permanente.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-6">
+                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                                <img src="https://i.postimg.cc/y8b6C427/Whats-App-Image-2026-07-21-at-11-42-03-AM.jpg" alt="Instalaciones y Equipo Centinela del Sur" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/5B1E77/ffffff?text=Centinela+del+Sur'">
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-900/90 to-transparent p-6 text-white">
+                                    <span class="text-xs font-bold text-accent-400 uppercase tracking-wider block">Compromiso y Calidad</span>
+                                    <h3 class="font-bold text-lg">Laboratorio Clínico Centinela del Sur</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission Vision Values Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                            <div class="w-12 h-12 rounded-2xl bg-accent-50 text-accent-600 flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-3">Nuestra Visión</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed">
+                                Consolidarnos como la red médica y laboratorio clínico líder en la región Santo Domingo, reconocida por su excelencia en bioseguridad, calidez de atención y tecnología analítica avanzada.
+                            </p>
+                        </div>
+
+                        <div class="glass-card p-8 rounded-3xl border border-slate-200">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl mb-6">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Nuestros Valores</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Ética profesional, rigurosidad científica, compromiso humano, puntualidad en la entrega de resultados y vocación de servicio a la comunidad.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- NUESTRO EQUIPO SECTION -->
+                <div class="mt-20 pt-16 border-t border-slate-100" id="seccion-equipo">
+                    <div class="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
+                        <span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Nuestro Equipo Humano</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Profesionales Conectados con Tu Salud</h2>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                            Contamos con un equipo multidisciplinario de profesionales altamente cualificados, capacitados en el manejo de tecnología automatizada y guiados por el compromiso ético y la calidez humana.
+                        </p>
+                    </div>
+
+                    <!-- Team Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <!-- Team Card 1: Team Group Photo -->
+                        <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+                            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                                <img src="https://i.postimg.cc/y8b6C427/Whats-App-Image-2026-07-21-at-11-42-05-AM.jpg" 
+                                     alt="Equipo Multidisciplinario Centinela del Sur" 
+                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.src='WhatsApp Image 2026-07-21 at 11.42.05 AM.jpeg'">
+                                <div class="absolute top-3 left-3 bg-brand-500/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                                    Equipo Médico y Técnico
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900 group-hover:text-brand-500 transition-colors">Equipo Multidisciplinario</h3>
+                                    <p class="text-xs font-semibold text-accent-600 mt-1">Bioquímicos, Flebotomistas y Personal Especializado</p>
+                                    <p class="text-slate-600 text-xs mt-3 leading-relaxed">
+                                        Nuestros colaboradores combinan el rigor profesional con una atención cálida y cercana para que cada paciente se sienta respaldado en todo momento.
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-medium text-slate-500">
+                                    <span><i class="fa-solid fa-users text-brand-500 mr-1"></i> Atención Integral</span>
+                                    <span class="text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Certificados</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Card 2: Maglumi X3 Chemiluminescence Specialist -->
+                        <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                                <img src="https://i.postimg.cc/y8b6C427/Whats-App-Image-2026-07-21-at-11-42-05-AM-(1).jpg" 
+                                     alt="Tecnología Analítica Automatizada MAGLUMI X3" 
+                                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.src='WhatsApp Image 2026-07-21 at 11.42.05 AM (1).jpeg'">
+                                <div class="absolute top-3 left-3 bg-accent-500/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                                    Química e Inmunología
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900 group-hover:text-accent-600 transition-colors">Automatización y Alta Precisión</h3>
+                                    <p class="text-xs font-semibold text-brand-500 mt-1">Procesamiento Automatizado MAGLUMI X3</p>
+                                    <p class="text-slate-600 text-xs mt-3 leading-relaxed">
+                                        Operación experta de analizadores por quimioluminiscencia y química clínica, garantizando rapidez y máxima precisión en hormonas, marcadores y perfiles.
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-medium text-slate-500">
+                                    <span><i class="fa-solid fa-microchip text-accent-500 mr-1"></i> Quimioluminiscencia</span>
+                                    <span class="text-brand-500 font-bold"><i class="fa-solid fa-bolt"></i> Resultados Rápidos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Card 3: Microbiologist -->
+                        <div class="glass-card rounded-3xl overflow-hidden border border-slate-200 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
+                            <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
+                                <img src="https://i.postimg.cc/y8b6C427/Whats-App-Image-2026-07-21-at-11-42-04-AM.jpg" 
+                                     alt="Análisis Microbiológico y Bioseguridad" 
+                                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.src='WhatsApp Image 2026-07-21 at 11.42.04 AM.jpeg'">
+                                <div class="absolute top-3 left-3 bg-indigo-600/90 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                                    Microbiología & Bioseguridad
+                                </div>
+                            </div>
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-900 group-hover:text-indigo-600 transition-colors">Cultivos y Bioseguridad</h3>
+                                    <p class="text-xs font-semibold text-indigo-600 mt-1">Control de Infecciones y Antibiogramas</p>
+                                    <p class="text-slate-600 text-xs mt-3 leading-relaxed">
+                                        Procesamiento estéril en cabinas de seguridad biológica para cultivos de microorganismos, aislamiento e identificación microbiológica certera.
+                                    </p>
+                                </div>
+                                <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-medium text-slate-500">
+                                    <span><i class="fa-solid fa-shield-virus text-indigo-500 mr-1"></i> Flujo Laminar</span>
+                                    <span class="text-emerald-600 font-bold"><i class="fa-solid fa-check-double"></i> Protocolo ISO</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div id="view-servicios" class="page-view">
+            <section class="py-16 bg-lightBg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="bg-accent-50 text-accent-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Catálogo Clínico</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Nuestros Servicios Médicos</h1>
+                        <p class="text-slate-600 text-sm mt-3">Descubre nuestras áreas especializadas con tecnología automatizada.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-500 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-900">Análisis Clínicos Completo</h3>
+                            <ul class="space-y-2 text-xs text-slate-600">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Hemograma Automatizado Completo</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Química Sanguínea (Glucosa, Urea, Creatinina, Ácido Úrico)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Perfil Lipídico (Colesterol Total, HDL, LDL, Triglicéridos)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Perfil Tiroideo (TSH, T3, T4 Libre)</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Pruebas de Función Hepática y Renal</li>
+                            </ul>
+                            <button onclick="openBookingModal('Análisis Clínicos')" class="mt-4 px-6 py-2.5 bg-brand-500 hover:bg-brand-600 text-white rounded-xl font-medium text-xs">Agendar Examen</button>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 space-y-4">
+                            <div class="w-12 h-12 rounded-2xl bg-accent-50 text-accent-600 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-house-medical"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-900">Muestras a Domicilio</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Evita traslados o largas esperas. Nuestro equipo se desplaza con cajas térmicas normadas para mantener la cadena de custodia de tus muestras clínicas.
+                            </p>
+                            <ul class="space-y-2 text-xs text-slate-600">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Para personas con movilidad reducida u adultos mayores</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-accent-500"></i> Coordinación flexible vía WhatsApp</li>
+                            </ul>
+                            <button onclick="openBookingModal('Muestras a Domicilio')" class="mt-4 px-6 py-2.5 bg-accent-500 hover:bg-accent-600 text-white rounded-xl font-medium text-xs">Solicitar a Domicilio</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-promociones" class="page-view">
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase">Prevención Familiar</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Paquetes Preventivos Especiales</h1>
+                        <p class="text-slate-600 text-sm mt-3">Aprovecha nuestros perfiles promocionales para un control integral de tu salud.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        
+                        <!-- Package 1 -->
+                        <div class="rounded-3xl p-8 border border-slate-200 bg-slate-50 flex flex-col justify-between hover:shadow-xl transition-all">
+                            <div>
+                                <span class="bg-brand-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Popular</span>
+                                <h3 class="font-bold text-2xl text-slate-900 mt-4">Chequeo Básico Preventivo</h3>
+                                <p class="text-slate-500 text-xs mt-2">Evaluación fundamental de salud</p>
+                                <ul class="mt-6 space-y-3 text-xs text-slate-700">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Biometría Hemática Completa</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Glucosa en Ayunas</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Colesterol y Triglicéridos</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Examen General de Orina</li>
+                                </ul>
+                            </div>
+                            <div class="pt-8 mt-8 border-t border-slate-200">
+                                <button onclick="openBookingModal('Chequeo Básico Preventivo')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs shadow-md">Consultar Precio y Agendar</button>
+                            </div>
+                        </div>
+
+                        <!-- Package 2 -->
+                        <div class="rounded-3xl p-8 border-2 border-accent-500 bg-white relative flex flex-col justify-between shadow-lg">
+                            <div class="absolute -top-3 right-6 bg-accent-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Recomendado Médicos</div>
+                            <div>
+                                <span class="bg-accent-100 text-accent-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Completo</span>
+                                <h3 class="font-bold text-2xl text-slate-900 mt-4">Perfil Salud Ejecutiva</h3>
+                                <p class="text-slate-500 text-xs mt-2">Control metabólico y de órganos clave</p>
+                                <ul class="mt-6 space-y-3 text-xs text-slate-700">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Biometría + Perfil Lipídico Completo</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Función Hepática (TGO, TGP, Bilirrubinas)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Función Renal (Urea, Creatinina, Ácido Úrico)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> TSH (Perfil Tiroideo inicial)</li>
+                                </ul>
+                            </div>
+                            <div class="pt-8 mt-8 border-t border-slate-100">
+                                <button onclick="openBookingModal('Perfil Salud Ejecutiva')" class="w-full py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl text-xs shadow-md">Consultar Precio y Agendar</button>
+                            </div>
+                        </div>
+
+                        <!-- Package 3 -->
+                        <div class="rounded-3xl p-8 border border-slate-200 bg-slate-50 flex flex-col justify-between hover:shadow-xl transition-all">
+                            <div>
+                                <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase">Especializado</span>
+                                <h3 class="font-bold text-2xl text-slate-900 mt-4">Perfil Hormonal Femenino / Masculino</h3>
+                                <p class="text-slate-500 text-xs mt-2">Para control endocrinológico</p>
+                                <ul class="mt-6 space-y-3 text-xs text-slate-700">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Perfil Tiroideo T3, T4, TSH</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Marcadores Prostáticos PSA (Varones)</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-accent-500"></i> Hormonas Ginecológicas (Damas)</li>
+                                </ul>
+                            </div>
+                            <div class="pt-8 mt-8 border-t border-slate-200">
+                                <button onclick="openBookingModal('Perfil Hormonal')" class="w-full py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-xs shadow-md">Consultar Precio y Agendar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-catalogo" class="page-view">
+            <section class="py-16 bg-lightBg">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-10">
+                        <span class="bg-brand-50 text-brand-500 text-xs font-bold px-3 py-1 rounded-full uppercase">Buscador Interactivo</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Catálogo de Exámenes Clínicos</h1>
+                        <p class="text-slate-600 text-sm mt-2">Consulta los requisitos de preparación (ayuno, muestra) e indicaciones antes de realizar tus exámenes.</p>
+                    </div>
+
+                    <!-- Search Filter Box -->
+                    <div class="max-w-2xl mx-auto mb-10">
+                        <div class="relative">
+                            <input type="text" id="catalog-search" onkeyup="filterCatalog()" placeholder="Buscar por examen (ej: glucosa, tiroides, ecografía, hemograma)..." class="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 shadow-sm text-sm focus:ring-2 focus:ring-accent-500 focus:outline-none bg-white">
+                            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg"></i>
+                        </div>
+                    </div>
+
+                    <!-- Exams List Grid -->
+                    <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Dynamic JS renders elements here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-contacto" class="page-view">
+            <section class="py-16 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="bg-accent-50 text-accent-600 text-xs font-bold px-3 py-1 rounded-full uppercase">Ubicaciones</span>
+                        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Nuestras 6 Sucursales en Santo Domingo</h1>
+                        <p class="text-slate-600 text-sm mt-2">Estamos cerca de ti con atención ágil y profesional.</p>
+                    </div>
+
+                    <!-- Branches Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Matriz -->
+                        <div class="p-6 rounded-3xl border border-slate-200 bg-slate-50 space-y-3">
+                            <span class="bg-brand-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">MATRIZ</span>
+                            <h3 class="font-bold text-lg text-slate-900">Av. Chone y Río Chila</h3>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Av. Chone y Río Chila, Santo Domingo</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-phone text-accent-500 mr-1"></i> 099 293 0301</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Lun-Vie: 7:30am - 5:00pm | Sáb: 8:00am - 1:00pm</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block pt-2 text-xs font-bold text-brand-500 hover:underline">Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+
+                        <!-- Sucursal 1 -->
+                        <div class="p-6 rounded-3xl border border-slate-200 bg-slate-50 space-y-3">
+                            <span class="bg-slate-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">SUCURSAL 1</span>
+                            <h3 class="font-bold text-lg text-slate-900">Vía El Búa</h3>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Vía El Búa (Frente al Hospital)</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-phone text-accent-500 mr-1"></i> 099 293 0301</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Lun-Vie: 7:30am - 5:00pm | Sáb: 8:00am - 1:00pm</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block pt-2 text-xs font-bold text-brand-500 hover:underline">Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+
+                        <!-- Sucursal 2 -->
+                        <div class="p-6 rounded-3xl border border-slate-200 bg-slate-50 space-y-3">
+                            <span class="bg-slate-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">SUCURSAL 2</span>
+                            <h3 class="font-bold text-lg text-slate-900">Latacunga y Av. Quito</h3>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Calle Latacunga y Av. Quito</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-phone text-accent-500 mr-1"></i> 099 293 0301</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Lun-Vie: 7:30am - 5:00pm | Sáb: 8:00am - 1:00pm</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block pt-2 text-xs font-bold text-brand-500 hover:underline">Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+
+                        <!-- Sucursal 3 -->
+                        <div class="p-6 rounded-3xl border border-slate-200 bg-slate-50 space-y-3">
+                            <span class="bg-slate-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">SUCURSAL 3</span>
+                            <h3 class="font-bold text-lg text-slate-900">Barrio Rumiñahui</h3>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Sector Barrio Rumiñahui</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-phone text-accent-500 mr-1"></i> 099 293 0301</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Lun-Vie: 7:30am - 5:00pm | Sáb: 8:00am - 1:00pm</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block pt-2 text-xs font-bold text-brand-500 hover:underline">Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+
+                        <!-- Sucursal 4 -->
+                        <div class="p-6 rounded-3xl border border-slate-200 bg-slate-50 space-y-3">
+                            <span class="bg-slate-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">SUCURSAL 4</span>
+                            <h3 class="font-bold text-lg text-slate-900">Los Rosales 4ta Etapa</h3>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Urb. Los Rosales 4ta etapa</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-phone text-accent-500 mr-1"></i> 099 293 0301</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Lun-Vie: 7:30am - 5:00pm | Sáb: 8:00am - 1:00pm</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block pt-2 text-xs font-bold text-brand-500 hover:underline">Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+
+                        <!-- Sucursal 5 -->
+                        <div class="p-6 rounded-3xl border border-slate-200 bg-slate-50 space-y-3">
+                            <span class="bg-slate-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">SUCURSAL 5</span>
+                            <h3 class="font-bold text-lg text-slate-900">Madrid y Av. Quito</h3>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-location-dot text-accent-500 mr-1"></i> Sector La Quadra (Madrid y Av. Quito)</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-phone text-accent-500 mr-1"></i> 099 293 0301</p>
+                            <p class="text-xs text-slate-600"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Lun-Vie: 7:30am - 5:00pm | Sáb: 8:00am - 1:00pm</p>
+                            <a href="https://maps.google.com" target="_blank" class="inline-block pt-2 text-xs font-bold text-brand-500 hover:underline">Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="bg-brand-900 text-white pt-16 pb-8 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-brand-800">
+                
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <a href="#inicio" onclick="switchPage('inicio')" class="inline-block group">
+                        <img src="https://i.postimg.cc/9Q9sx6dS/Whats-App-Image-2026-03-05-at-12-24-53-PM-jpe.jpg" 
+                             alt="Laboratorio Clínico Centinela del Sur Logo" 
+                             class="h-12 sm:h-14 w-auto object-contain bg-white/95 p-1.5 rounded-xl shadow-md group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.onerror=null; this.src='https://placehold.co/220x60/5B1E77/ffffff?text=Centinela+del+Sur';">
+                    </a>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Laboratorio Clínico y Centro Médico comprometido con la exactitud diagnóstica y la salud de la comunidad de Santo Domingo.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm text-accent-400 uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><button onclick="switchPage('inicio')" class="hover:text-white transition-colors">Inicio</button></li>
+                        <li><button onclick="switchPage('nosotros')" class="hover:text-white transition-colors">Nosotros</button></li>
+                        <li><button onclick="switchPage('servicios')" class="hover:text-white transition-colors">Servicios</button></li>
+                        <li><button onclick="switchPage('promociones')" class="hover:text-white transition-colors">Promociones Preventivas</button></li>
+                        <li><button onclick="switchPage('catalogo')" class="hover:text-white transition-colors">Catálogo de Exámenes</button></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm text-accent-400 uppercase tracking-wider">Atención al Cliente</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-phone text-accent-500 mr-2"></i> 099 293 0301</li>
+                        <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> +593 99 293 0301</li>
+                        <li><i class="fa-solid fa-clock text-accent-500 mr-2"></i> Lun - Vie: 7:30 am - 5:00 pm</li>
+                        <li><i class="fa-solid fa-clock text-accent-500 mr-2"></i> Sábados: 8:00 am - 1:00 pm</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-sm text-accent-400 uppercase tracking-wider">Convenios y Métodos</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Aceptamos tarjetas de crédito/débito, transferencias bancarias y convenios con aseguradoras.
+                    </p>
+                    <div class="flex items-center gap-2 pt-2 text-xl text-slate-300">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-solid fa-shield-halved text-accent-400"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>&copy; 2026 Laboratorio Clínico Centinela del Sur. Todos los derechos reservados.</p>
+                <p>Santo Domingo, Ecuador</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="booking-modal" class="fixed inset-0 z-50 bg-brand-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900">Agendar Cita o Examen</h3>
+                    <p class="text-xs text-slate-500">Confirmación inmediata vía WhatsApp</p>
+                </div>
+            </div>
+
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nombre Completo</label>
+                    <input type="text" id="modal-name" required placeholder="Ej: Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-accent-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Teléfono WhatsApp</label>
+                    <input type="tel" id="modal-phone" required placeholder="Ej: 0992930301" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-accent-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Servicio / Examen Solicitado</label>
+                    <input type="text" id="modal-service" required placeholder="Ej: Biometría, Ecografía, Muestra a domicilio" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-accent-500 focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Fecha Preferida</label>
+                        <input type="date" id="modal-date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-accent-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Sucursal</label>
+                        <select id="modal-branch" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-accent-500 focus:outline-none">
+                            <option value="Matriz (Av. Chone)">Matriz: Av. Chone</option>
+                            <option value="Sucursal 1 (El Búa)">Sucursal 1: Vía El Búa</option>
+                            <option value="Sucursal 2 (Latacunga)">Sucursal 2: Latacunga</option>
+                            <option value="Sucursal 3 (Rumiñahui)">Sucursal 3: Rumiñahui</option>
+                            <option value="Sucursal 4 (Los Rosales)">Sucursal 4: Rosales</option>
+                            <option value="Sucursal 5 (Madrid)">Sucursal 5: Madrid</option>
+                            <option value="A Domicilio">Toma a Domicilio</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/30">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Confirmar y Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-800">
+            <i class="fa-solid fa-circle-check text-accent-400 text-lg"></i>
+            <span id="toast-message" class="text-xs font-medium">Acción realizada con éxito.</span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        const examDatabase = [
+            { name: "Hemograma Completo / Biometría", category: "Hematología", prep: "Ayuno de 8 horas recomendado.", sample: "Sangre venosa", time: "3 - 5 Horas" },
+            { name: "Glucosa en Ayunas", category: "Química Sanguínea", prep: "Ayuno obligatorio de 8 a 12 horas.", sample: "Sangre venosa", time: "2 - 4 Horas" },
+            { name: "Perfil Lipídico Completo", category: "Química Sanguínea", prep: "Ayuno de 12 horas. Evitar comidas grasas noche anterior.", sample: "Sangre venosa", time: "4 - 6 Horas" },
+            { name: "Perfil Tiroideo (TSH, T3, T4)", category: "Hormonas", prep: "Ayuno de 8 horas. Informar consumo de levotiroxina.", sample: "Sangre venosa", time: "Mismo día" },
+            { name: "Examen General de Orina (EMO)", category: "Uroanálisis", prep: "Primera orina de la mañana, chorro medio.", sample: "Frasco estéril", time: "2 - 3 Horas" },
+            { name: "Coproparasitológico Directo", category: "Microbiología", prep: "Muestra fresca en frasco recolector sin mezcla con orina.", sample: "Heces", time: "2 - 4 Horas" },
+            { name: "Ecografía Abdominal Total", category: "Ecografía HD", prep: "Ayuno de 6 a 8 horas y vejiga llena (tomar 1 litro de agua).", sample: "Ultrasonido", time: "Inmediato" },
+            { name: "Ecografía Obstétrica 4D/HD", category: "Ecografía HD", prep: "Hidratarse bien antes del examen.", sample: "Ultrasonido", time: "Inmediato" },
+            { name: "Marcador Prostático PSA Total", category: "Inmunología", prep: "Evitar relaciones sexuales o ejercicio fuerte 48 horas antes.", sample: "Sangre venosa", time: "Mismo día" },
+            { name: "Hemoglobina Glicosilada (HbA1c)", category: "Química Sanguínea", prep: "No requiere ayuno estricto.", sample: "Sangre venosa", time: "3 - 5 Horas" }
+        ];
+
+        window.onload = function() {
+            // Hide Preloader
+            const preloader = document.getElementById('preloader');
+            if(preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }
+
+            // Initialize AOS Animations
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Populate Exam Catalog
+            renderCatalog(examDatabase);
+        };
+
+        function switchPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Show selected page
+            const targetPage = document.getElementById(`view-${pageId}`);
+            if(targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update Navigation Buttons Active Styling
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                btn.classList.remove('text-brand-500', 'bg-brand-50', 'font-semibold');
+                btn.classList.add('text-slate-600');
+            });
+
+            const activeNavBtn = document.getElementById(`nav-${pageId}`);
+            if(activeNavBtn) {
+                activeNavBtn.classList.add('text-brand-500', 'bg-brand-50', 'font-semibold');
+                activeNavBtn.classList.remove('text-slate-600');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-icon');
+            if(menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        }
+
+        function renderCatalog(items) {
+            const grid = document.getElementById('catalog-grid');
+            if(!grid) return;
+            grid.innerHTML = '';
+
+            if(items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400 text-xs font-semibold">No se encontraron exámenes coincidentes.</div>`;
+                return;
+            }
+
+            items.forEach(exam => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <span class="bg-brand-50 text-brand-600 text-[10px] font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">${exam.category}</span>
+                        <h3 class="font-bold text-base text-slate-900 mt-3">${exam.name}</h3>
+                        <div class="mt-4 space-y-2 text-xs text-slate-600">
+                            <p><strong class="text-slate-800"><i class="fa-solid fa-notes-medical text-accent-500 mr-1"></i> Preparación:</strong> ${exam.prep}</p>
+                            <p><strong class="text-slate-800"><i class="fa-solid fa-vial text-accent-500 mr-1"></i> Muestra:</strong> ${exam.sample}</p>
+                            <p><strong class="text-slate-800"><i class="fa-solid fa-clock text-accent-500 mr-1"></i> Resultado:</strong> ${exam.time}</p>
+                        </div>
+                    </div>
+                    <button onclick="openBookingModal('${exam.name}')" class="mt-6 w-full py-2.5 bg-slate-100 hover:bg-brand-500 hover:text-white text-slate-700 font-semibold rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-plus"></i> Agendar este Examen
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCatalog() {
+            const query = document.getElementById('catalog-search').value.toLowerCase();
+            const filtered = examDatabase.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query) ||
+                item.prep.toLowerCase().includes(query)
+            );
+            renderCatalog(filtered);
+        }
+
+        function openBookingModal(serviceName = '') {
+            const modal = document.getElementById('booking-modal');
+            if(modal) {
+                modal.classList.remove('hidden');
+                if(serviceName) {
+                    document.getElementById('modal-service').value = serviceName;
+                }
+            }
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            if(modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('modal-name').value;
+            const phone = document.getElementById('modal-phone').value;
+            const service = document.getElementById('modal-service').value;
+            const date = document.getElementById('modal-date').value;
+            const branch = document.getElementById('modal-branch').value;
+
+            const text = `Hola Laboratorio Centinela del Sur, me gustaría agendar una cita.%0A%0A*Nombre:* ${encodeURIComponent(name)}%0A*Teléfono:* ${encodeURIComponent(phone)}%0A*Examen/Servicio:* ${encodeURIComponent(service)}%0A*Fecha deseada:* ${encodeURIComponent(date)}%0A*Sucursal:* ${encodeURIComponent(branch)}`;
+
+            closeBookingModal();
+            showToast("Redirigiendo a WhatsApp...");
+            
+            setTimeout(() => {
+                window.open(`https://wa.me/593992930301?text=${text}`, '_blank');
+            }, 800);
+        }
+
+        function handleHeroQuickQuote(event) {
+            event.preventDefault();
+            const type = document.getElementById('hero-quote-type').value;
+            const branch = document.getElementById('hero-quote-branch').value;
+            const name = document.getElementById('hero-quote-name').value;
+
+            const text = `Hola Centinela del Sur, requiero cotización.%0A%0A*Cliente:* ${encodeURIComponent(name)}%0A*Servicio:* ${encodeURIComponent(type)}%0A*Sucursal:* ${encodeURIComponent(branch)}`;
+
+            showToast("Abriendo WhatsApp...");
+            setTimeout(() => {
+                window.open(`https://wa.me/593992930301?text=${text}`, '_blank');
+            }, 800);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgSpan = document.getElementById('toast-message');
+            if(toast && msgSpan) {
+                msgSpan.innerText = message;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
